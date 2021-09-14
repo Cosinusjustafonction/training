@@ -18,9 +18,9 @@ void permutation(bucket &a , bucket &b) {
 }
 
 int main(){
-	vector<int> t ;
-	int pours ;
-	freopen(("mixmilk.in"),"r",stdin);
+    vector<int> t ;
+    int pours ;
+    freopen(("mixmilk.in"),"r",stdin);
     freopen(("mixmilk.out"),"w",stdout); 
     bucket a,b,c;
     cin >> a.capacity >> a.milk ;
