@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+using namespace std;
+#include <bits/stdc++.h>
+using namespace std;
+void setIO(string name=""){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    if (name.size()!=0){
+        freopen((name+".in").c_str(),"r",stdin);
+        freopen((name+".out").c_str(),"w",stdout);
+    }
+} 
+
+int main(){
+    setIO();
+    int k , l ;
+    long long  temp1 = 0 ;
+    long long  temp2 = 0 ;
+    long long  ans = 0;
+    long long  first = 0 ;
+    long long  second = 0 ;
+    long long  third = 0;
+    cin >> k ;
+    vector<int> x = {0,1,1,2} ;
+    for (int j = 0 ; j < k ; j++){
+        cin >> l ;
+        if (l <= x.size()-1){
+            cout << x[l] << endl;
+        }
+        else {
+            l = l -(x.size()-1);
+            first = (x.size()-1)-2;
+            second =  (x.size()-1)-1;
+            third = (x.size()-1);
+            temp1 = x[first];
+            temp2 = x[second];
+            ans = x[third];
+            for (int i = 0 ; i < l ; i++){
+            
+            temp1 = temp2 ;
+            temp2 = ans ;
+            ans = (temp1 + temp2) % 1000000007 ;
+            x.push_back(ans);
+
+            }
+            cout << ans % 1000000007   << endl;
+        }
+    }
+        
+        
+}  
